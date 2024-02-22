@@ -17,6 +17,7 @@
 		"space-before-blocks": "off", //Откл базовое поведение
 		"@typescript-eslint/space-before-blocks": "error", // Добавить пробел после открытия блока логики функции
 		"@typescript-eslint/type-annotation-spacing": "error", //Правильные отступы
+		"@typescript-eslint/no-unused-vars": "warn",
 		"@typescript-eslint/no-empty-interface": [
 			//чтобы гарантировать, что в коде объявлены только значимые интерфейсы.
 			"error",

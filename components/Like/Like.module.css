@@ -1,0 +1,52 @@
+.circle {
+	padding: 16px;
+	border: 1px solid #303030;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	transition: all 0.25s;
+	position: relative;
+	overflow: hidden;
+}
+
+.circle::after {
+	content: '';
+	width: 0;
+	position: absolute;
+	height: 0;
+	border-radius: 50%;
+	background-color: var(--primary-color);
+	left: 50%;
+	transition: all 0.25s;
+	height: 50%;
+}
+.circle:hover {
+	border: 1px solid white;
+}
+.circle:hover::after {
+	width: 50px;
+	left: 0;
+	height: 50px;
+	z-index: 1;
+}
+.circle:hover > .icon {
+	filter: brightness(10);
+	z-index: 2;
+}
+
+.line {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	color: var(--grey-color);
+}
+.line > .icon {
+	filter: contrast(0.3);
+}
+
+.like {
+	cursor: pointer;
+}
