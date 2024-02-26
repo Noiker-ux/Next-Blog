@@ -1,28 +1,24 @@
-import Image from 'next/image';
 import style from './Like.module.css';
 import { ILikeProps } from './Like.props';
 import classNames from 'classnames';
+import LikeIcon from '../../public/LikeIcon.svg';
 
 export const Like = ({
-	children,
-	hasCounter = true,
-	className,
+	counter,
+	showCounter = true,
 }: ILikeProps): JSX.Element => {
 	return (
-		<div
-			className={classNames(
-				style.like,
-				className,
-				hasCounter ? style.line : style.circle,
-			)}>
-			{hasCounter && <span>{children}</span>}
-			<Image
-				src='/LikeIcon.svg'
-				alt='Иконка лайка'
-				width={hasCounter ? 15 : 17}
-				height={hasCounter ? 15 : 17}
-				className={style.icon}
-			/>
+		<div className={style.likeWrapper}>
+			{showCounter && <span className={style.counter}>{counter}</span>}
+			<a
+				title='Лайк'
+				href='#'
+				className={classNames({
+					[style.rowLike]: showCounter,
+					[style.circleLike]: !showCounter,
+				})}>
+				<LikeIcon className={classNames(style.likeIcon)} />
+			</a>
 		</div>
 	);
 };

@@ -1,0 +1,40 @@
+.card {
+	padding: 10px;
+	border: 1px solid var(--separator-color);
+	max-width: 350px;
+	border-radius: 6px;
+}
+.imageWrapper {
+	display: flex;
+	justify-content: center;
+	background-color: var(--light-blue);
+	border-radius: 5px;
+	padding: 5px 0;
+}
+.info {
+	margin-top: 16px;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+.header_left {
+	display: flex;
+	gap: 5px;
+}
+.anons {
+	margin-top: 6px;
+}
+.bottom {
+	margin-top: 17px;
+	display: flex;
+	justify-content: space-between;
+}
+.readMore {
+	display: flex;
+	color: var(--primary-color);
+	font-size: 12px;
+}
+.link {
+	display: flex;
+}

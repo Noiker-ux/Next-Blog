@@ -1,0 +1,17 @@
+.tag {
+	font-size: 12px;
+	line-height: 16.34px;
+}
+
+.light {
+	color: var(--grey-color);
+}
+
+.normal {
+	color: var(--dark-grey-color);
+}
+
+.bold {
+	font-weight: 700;
+	color: var(--dark-grey-color);
+}

@@ -1,7 +1,7 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface ILikeProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	children?: ReactNode;
-	hasCounter: boolean;
+	counter: number;
+	showCounter: boolean;
 }
