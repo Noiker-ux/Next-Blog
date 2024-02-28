@@ -38,3 +38,14 @@
 .rowLike:hover > svg > path {
 	stroke: var(--primary-color);
 }
+.liked > svg > path {
+	stroke: var(--primary-color);
+}
+
+.circleLike.liked {
+	background-color: var(--primary-color);
+	border-color: var(--white-color);
+}
+.circleLike.liked > svg > path {
+	stroke: var(--white-color);
+}

@@ -3,15 +3,34 @@ import style from './Card.module.css';
 import Image from 'next/image';
 import { Headling, Like, Paragraph, Tag } from '..';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export const Card = ({
+	id,
 	image = '/public/Grid.jpg',
 	tags,
 	timestamp,
 	title,
 	anons,
+	likes,
 	timeReading,
 }: ICardProps): JSX.Element => {
+	const [Likes, setLikes] = useState<number>(likes);
+
+	useEffect(() => {
+		fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+			method: 'PATCH',
+			body: JSON.stringify({
+				likes: Likes,
+			}),
+			headers: {
+				'Content-type': 'application/json; charset=UTF-8',
+			},
+		})
+			.then((response) => response.json())
+			.then((json) => console.log(json));
+	}, [Likes, id]);
+
 	return (
 		<div className={style.card}>
 			<div className={style.imageWrapper}>
@@ -27,7 +46,7 @@ export const Card = ({
 						))}
 						<Tag tag={'light'}>{timestamp}</Tag>
 					</div>
-					<Like counter={0} showCounter={true}></Like>
+					<Like setLikes={setLikes} counter={Likes} showCounter={true}></Like>
 				</div>
 				<Headling tag='h3'>{title}</Headling>
 				<Paragraph lineHeight={'small'} className={style.anons}>

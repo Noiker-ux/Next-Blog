@@ -1,8 +1,9 @@
 export default interface ICardProps {
+	id: number;
 	image: string;
 	tags: string[];
 	timestamp: string;
-	Likes: number;
+	likes: number;
 	title: string;
 	anons: string;
 	timeReading: number;
