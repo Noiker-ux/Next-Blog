@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
-
+import style from './layout.module.css';
 import './globals.css';
 
 const inter = Open_Sans({ subsets: ['latin'] });
@@ -21,7 +21,9 @@ export default function RootLayout({
 }>): JSX.Element {
 	return (
 		<html lang='ru'>
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<div className={style.container}>{children}</div>
+			</body>
 		</html>
 	);
 }
