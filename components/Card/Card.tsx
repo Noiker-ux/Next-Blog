@@ -1,3 +1,4 @@
+'use client';
 import ICardProps from './Card.props';
 import style from './Card.module.css';
 import Image from 'next/image';
