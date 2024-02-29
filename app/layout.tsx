@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
 import style from './layout.module.css';
 import './globals.css';
+import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
 
 const inter = Open_Sans({ subsets: ['latin'] });
 
@@ -11,9 +13,6 @@ export const metadata: Metadata = {
 	keywords: ['Blog', 'Next', 'Noiker', 'Next-Blog', 'Блог', 'Ноикер'],
 };
 
-const x: string[] = ['a', 'b'];
-console.log(x);
-
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -22,7 +21,11 @@ export default function RootLayout({
 	return (
 		<html lang='ru'>
 			<body className={inter.className}>
-				<div className={style.container}>{children}</div>
+				<div className={style.container}>
+					<Header />
+					{children}
+					<Footer />
+				</div>
 			</body>
 		</html>
 	);

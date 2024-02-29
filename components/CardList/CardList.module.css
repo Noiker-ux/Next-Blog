@@ -1,5 +1,21 @@
 .cardList {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+
+	gap: 33px;
+	justify-items: center;
+}
+
+@media (max-width: 1125px) {
+	.cardList {
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: start;
+	}
+}
+@media (max-width: 720px) {
+	.cardList {
+		grid-template-columns: 1fr;
+		justify-items: center;
+	}
 }
