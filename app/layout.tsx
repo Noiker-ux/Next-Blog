@@ -22,9 +22,9 @@ export default function RootLayout({
 		<html lang='ru'>
 			<body className={inter.className}>
 				<div className={style.container}>
-					<Header />
-					{children}
-					<Footer />
+					<Header className={style.header} />
+					<div className={style.body}>{children}</div>
+					<Footer className={style.footer} />
 				</div>
 			</body>
 		</html>
