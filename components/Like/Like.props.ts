@@ -5,8 +5,4 @@ export interface ILikeProps
   countLikes: number;
   showCounter?: boolean;
   isLiked?: boolean;
-  handleClickLike: (
-    count: number,
-    state: boolean,
-  ) => { countLikes: number; isLiked: boolean };
 }

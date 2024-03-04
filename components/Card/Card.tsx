@@ -36,6 +36,7 @@ export const Card = ({
     })
       .then((response) => response.json())
       .then((json) => console.log(json));
+    setIsLoading(false);
   }, [likeObj, id]);
 
   return (
@@ -54,12 +55,16 @@ export const Card = ({
             <Tag tag={'light'}>{timestamp}</Tag>
           </div>
           {isLoading && <>Обновление</>}
-          <Like
-            countLikes={likeObj.countLikes}
-            showCounter={true}
-            isLiked={likeObj.isLiked}
-            handleClickLike={setLikeObj}
-          />
+          <div
+            onClick={() => {
+              setLikeObj(likeObj.countLikes, likeObj.isLiked);
+            }}>
+            <Like
+              countLikes={likeObj.countLikes}
+              showCounter={true}
+              isLiked={likeObj.isLiked}
+            />
+          </div>
         </div>
         <Headling tag='h3'>{title}</Headling>
         <Paragraph lineHeight={'small'} className={style.anons}>
