@@ -1,10 +1,6 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export default interface ITagProps
-	extends DetailedHTMLProps<
-		HTMLAttributes<HTMLParagraphElement>,
-		HTMLParagraphElement
-	> {
-	children: ReactNode;
-	tag: 'light' | 'normal' | 'bold';
+  extends DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement> {
+  tag: 'light' | 'normal' | 'bold';
 }

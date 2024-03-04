@@ -1,10 +1,6 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export default interface IHeadlingProps
-	extends DetailedHTMLProps<
-		HTMLAttributes<HTMLHeadingElement>,
-		HTMLHeadingElement
-	> {
-	children: ReactNode;
-	tag: 'h1' | 'h2' | 'h3';
+  extends DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement> {
+  tag: 'h1' | 'h2' | 'h3';
 }

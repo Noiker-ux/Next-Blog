@@ -1,40 +1,43 @@
 .card {
-	padding: 10px;
-	border: 1px solid var(--separator-color);
-	max-width: 350px;
-	border-radius: 6px;
+  padding: 10px;
+  border: 1px solid var(--separator-color);
+  max-width: 350px;
+  border-radius: 6px;
 }
 .imageWrapper {
-	display: flex;
-	justify-content: center;
-	background-color: var(--light-blue);
-	border-radius: 5px;
-	padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--light-blue);
+  border-radius: 5px;
+  padding: 5px 0;
 }
 .info {
-	margin-top: 16px;
+  margin-top: 16px;
 }
 .header {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .header_left {
-	display: flex;
-	gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 .anons {
-	margin-top: 6px;
+  margin-top: 6px;
 }
 .bottom {
-	margin-top: 17px;
-	display: flex;
-	justify-content: space-between;
+  margin-top: 17px;
+  display: flex;
+  justify-content: space-between;
 }
 .readMore {
-	display: flex;
-	color: var(--primary-color);
-	font-size: 12px;
+  display: flex;
+  color: var(--primary-color);
+  font-size: 12px;
 }
 .link {
-	display: flex;
+  display: flex;
+}
+.loading {
+  opacity: 0.5;
 }

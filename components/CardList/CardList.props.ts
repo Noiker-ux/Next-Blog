@@ -1,6 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export default interface ICardListProps
-	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	children: ReactNode;
-}
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
