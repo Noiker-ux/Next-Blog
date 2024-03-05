@@ -1,6 +1,12 @@
 import { useState } from 'react';
 
-export const useLike = (initialLikes: number, initialStateLiked: boolean) => {
+export const useLike = (
+  initialLikes: number,
+  initialStateLiked: boolean,
+): [
+  { countLikes: number; isLiked: boolean },
+  (countLikes: number, isLiked: boolean) => void,
+] => {
   const [countLikes, setLikes] = useState<number>(initialLikes);
   const [isLiked, setIsLiked] = useState<boolean>(initialStateLiked);
 

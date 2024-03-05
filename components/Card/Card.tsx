@@ -57,7 +57,7 @@ export const Card = ({
           {isLoading && <>Обновление</>}
           <div
             onClick={() => {
-              setLikeObj(likeObj.countLikes, likeObj.isLiked);
+              setLikeObj(likes, isLiked);
             }}>
             <Like
               countLikes={likeObj.countLikes}
@@ -70,13 +70,13 @@ export const Card = ({
         <Paragraph lineHeight={'small'} className={style.anons}>
           {anons}
         </Paragraph>
-        <div className={style.bottom}>
-          <Tag tag={'light'}>{timeReading} минут(ы)</Tag>
-          <Link className={style.readMore} href={'#'}>
-            Читать
-            <Image src={'/arrow.svg'} alt={'Иконка стрелочки'} width={20} height={20} />
-          </Link>
-        </div>
+      </div>
+      <div className={style.bottom}>
+        <Tag tag={'light'}>{timeReading} минут(ы)</Tag>
+        <Link className={style.readMore} href={'#'}>
+          Читать
+          <Image src={'/arrow.svg'} alt={'Иконка стрелочки'} width={20} height={20} />
+        </Link>
       </div>
     </div>
   );

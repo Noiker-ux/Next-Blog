@@ -1,9 +1,12 @@
+import { getPosts } from '@/api/gerPosts';
 import { CardList } from '@/components/CardList/CardList';
 
-export default function Home(): JSX.Element {
+export default async function Home() {
+  const posts = await getPosts();
+
   return (
     <main>
-      <CardList />
+      <CardList posts={posts} />
     </main>
   );
 }
