@@ -1,3 +1,4 @@
+'use client';
 import { Headling } from '@/components';
 import IHeaderProps from './Header.props';
 import style from './Header.module.css';

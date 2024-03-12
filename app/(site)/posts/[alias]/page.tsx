@@ -1,9 +1,28 @@
+import { getDetail } from '@/api/getDetail';
 import { Metadata } from 'next';
+import style from './page.module.css';
+import { notFound } from 'next/navigation';
+import { Like, Tag } from '@/components';
 
 export const metadata: Metadata = {
   title: 'Деталка',
 };
 
-export default function detail({ params }: { params: { alias: string } }) {
-  return <div>{params.alias}</div>;
+export default async function detail({ params }: { params: { alias: string } }) {
+  const detail = await getDetail(Number(params.alias));
+
+  if (!detail) {
+    notFound();
+  }
+
+  return (
+    <div className={style.detail}>
+      <h1>{detail.title}</h1>
+      <div className={style.tags}>
+        <Tag tag='normal'>Front-end</Tag>•<Tag tag='light'>1 месяц(ев) назад</Tag>•
+        <Tag tag='light'>3 минут(ы)</Tag>•
+        <Like countLikes={5} showCounter />
+      </div>
+    </div>
+  );
 }

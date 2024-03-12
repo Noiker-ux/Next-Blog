@@ -6,7 +6,6 @@ import { Headling, Like, Paragraph, Tag } from '..';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
-import { log } from 'console';
 import { useLike } from '@/hooks/useLike';
 
 export const Card = ({
@@ -73,7 +72,7 @@ export const Card = ({
       </div>
       <div className={style.bottom}>
         <Tag tag={'light'}>{timeReading} минут(ы)</Tag>
-        <Link className={style.readMore} href={'#'}>
+        <Link className={style.readMore} href={`/posts/${id}`}>
           Читать
           <Image src={'/arrow.svg'} alt={'Иконка стрелочки'} width={20} height={20} />
         </Link>

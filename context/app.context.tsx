@@ -1,3 +1,4 @@
+'use client';
 import { ReactNode, createContext } from 'react';
 
 export const AppContext = createContext({ github: 'https://github.com/Noiker-ux' });
