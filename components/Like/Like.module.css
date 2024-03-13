@@ -1,0 +1,51 @@
+.likeWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	color: var(--grey-color);
+}
+.likeIcon {
+	display: flex;
+}
+.counter {
+	font-size: 14px;
+}
+/* circleLike like */
+.circleLike {
+	display: flex;
+	padding: 14px;
+	border: 1px solid var(--black-color);
+	border-radius: 50%;
+	transition: all 0.2s;
+}
+.circleLike > svg > path {
+	stroke: var(--black-color);
+}
+
+/* hover circleLike like */
+.circleLike:hover {
+	background-color: var(--primary-color);
+	border-color: var(--white-color);
+}
+
+.circleLike:hover > svg > path {
+	stroke: var(--white-color);
+}
+.rowLike {
+	transition: all 0.2s;
+}
+.rowLike:hover > svg > path {
+	stroke: var(--primary-color);
+}
+.liked > svg > path {
+	stroke: var(--primary-color);
+}
+
+.circleLike.liked {
+	background-color: var(--primary-color);
+	border-color: var(--white-color);
+}
+.circleLike.liked > svg > path {
+	stroke: var(--white-color);
+}
